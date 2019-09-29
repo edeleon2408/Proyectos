@@ -12,10 +12,10 @@ EXPOSE 8082
 
 
 # The application's jar file
-ARG JAR_FILE=/target/kaizen-api.jar
+ARG JAR_FILE=/target/jenkins-0.1.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} kaizen-api.jar
+ADD ${JAR_FILE} jenkins-0.1.jar
 
 # Run the jar file 
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","/kaizen-api.jar"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","/jenkins-0.1.jar"]
