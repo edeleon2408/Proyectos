@@ -2,9 +2,20 @@
 pipeline {
  agent any
  stages {
-        stage('Checkout-git'){
+        stage('build') {
+          steps {
+             bat 'echo step1'
+             bat 'echo step2'
+             bat '''
+                echo 'Multiline'
+                echo 'Example'
+             '''
+             echo 'not using shell'
+          }
+       }
+        /*stage('Checkout-git'){
                steps{
-		git poll: true, url: 'git@github.com:videocursoscloud/test-jenkins-1.git'
+		git poll: true, url: 'git@github.com:edeleon2408/Proyectos.git'
                }
         }
         stage('CreateVirtualEnv') {
@@ -51,7 +62,7 @@ pipeline {
 					docker rmi apptest:latest
                 '''
             }
-        } 
+        } */
   }
 }
 
