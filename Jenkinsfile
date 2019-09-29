@@ -18,7 +18,7 @@ pipeline {
 		git poll: true, url: 'git@github.com:edeleon2408/Proyectos.git'
                }
         }
-        stage('CreateVirtualEnv') {
+        /*stage('CreateVirtualEnv') {
             steps {
 				sh '''
 					bash -c "virtualenv entorno_virtual && source entorno_virtual/bin/activate"
