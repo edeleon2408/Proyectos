@@ -4,10 +4,10 @@ pipeline {
  stages {
         stage('Checkout-git'){
                steps{
-		git poll: true, url: 'git@github.com:videocursoscloud/test-jenkins-1.git'
+		git poll: true, url: 'git@github.com:edeleon2408/Proyectos.git'
                }
         }
-        stage('CreateVirtualEnv') {
+        /*stage('CreateVirtualEnv') {
             steps {
 				sh '''
 					bash -c "virtualenv entorno_virtual && source entorno_virtual/bin/activate"
@@ -51,7 +51,7 @@ pipeline {
 					docker rmi apptest:latest
                 '''
             }
-        } 
+        } */
   }
 }
 
