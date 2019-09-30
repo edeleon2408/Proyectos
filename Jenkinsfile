@@ -8,12 +8,12 @@ pipeline {
              bat 'mvn clean compile'             
           }
        }
-        stage('test') {
-            echo '******** Realizando el test del proyecto *********'
+        stage('test') {            
                   steps {
+                    echo '******** Realizando el test del proyecto *********'
                      bat 'mvn verify'             
                   }
-               }
+        }
         /*stage('Checkout-git'){
                steps{
 		git poll: true, url: 'git@github.com:edeleon2408/Proyectos.git'
