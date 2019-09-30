@@ -10,14 +10,14 @@ pipeline {
        }
         stage('test') {            
                   steps {
-                        try{
+                       // try{
                             echo '******** Realizando el test del proyecto *********'
                             bat 'mvn verify'
-                        }catch(err) {
+                       /* }catch(err) {
                             if (currentBuild.result == 'UNSTABLE')
                                 currentBuild.result = 'FAILURE'
                             throw err
-                        }
+                        }*/
                                  
                   }
         }
