@@ -10,7 +10,7 @@ pipeline {
                 echo 'Multiline'
                 echo 'Example'
              '''
-             echo 'not using shell'
+             echo 'not using shell, use windows'
           }
        }
         /*stage('Checkout-git'){
