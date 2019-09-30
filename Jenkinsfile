@@ -4,9 +4,16 @@ pipeline {
  stages {
         stage('build') {
           steps {
-             bat 'mvn clean compile package'             
+            echo '******** Realizando la compilacion del proyecto *********'
+             bat 'mvn clean compile'             
           }
        }
+        stage('test') {
+            echo '******** Realizando el test del proyecto *********'
+                  steps {
+                     bat 'mvn verify'             
+                  }
+               }
         /*stage('Checkout-git'){
                steps{
 		git poll: true, url: 'git@github.com:edeleon2408/Proyectos.git'
